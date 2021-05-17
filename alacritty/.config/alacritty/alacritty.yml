@@ -1,0 +1,10 @@
+cursor:
+  style:
+    shape: Underline
+    blinking: Always
+selection:
+  save_to_clipboard: false
+background_opacity: 1.0
+font:
+  normal:
+    family: FiraCode Nerd Font

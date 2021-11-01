@@ -13,7 +13,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.config/zsh/custom"
 
 #ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="spaceship"
+#ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
 
 plugins=(
   git

@@ -33,6 +33,6 @@ key_bindings:
   - { key: PageDown,  mods: None,          action: ScrollPageDown, mode: ~Alt  }
   - { key: Home,      mods: Shift,         action: ScrollToTop,    mode: ~Alt  }
   - { key: End,       mods: Shift,         action: ScrollToBottom, mode: ~Alt  }
-  - { key: L,         mods: Alt,           chars: "\x40"                       }
+#  - { key: L,         mods: Alt,           chars: "\x40"                       }
   - { key: I,      mods: Alt|Shift,           chars: "\x7C"                       }
 

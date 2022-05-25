@@ -10,9 +10,6 @@
 [submodule "nvim/.local/share/nvim/site/pack/packer/start/packer.nvim"]
 	path = nvim/.local/share/nvim/site/pack/packer/start/packer.nvim
 	url = https://github.com/wbthomason/packer.nvim
-[submodule "nvim/.config/nvim"]
-	path = nvim/.config/nvim
-	url = https://github.com/morten-olsen/NvChad
 [submodule "base/.config/zsh/custom/themes/spaceship-prompt"]
 	path = base/.config/zsh/custom/themes/spaceship-prompt
 	url = https://github.com/spaceship-prompt/spaceship-prompt.git
@@ -22,3 +19,9 @@
 [submodule "base/.config/zsh/custom/plugins/zsh-syntax-highlighting"]
 	path = base/.config/zsh/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "base/.config/zsh/custom/zsh-vi-mode"]
+	path = base/.config/zsh/custom/zsh-vi-mode
+	url = https://github.com/jeffreytse/zsh-vi-mode
+[submodule "nvim/.config/nvim"]
+	path = nvim/.config/nvim
+	url = https://github.com/morten-olsen/nvim

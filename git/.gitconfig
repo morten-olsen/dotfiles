@@ -12,7 +12,7 @@
 [difftool "nvimdiff"]
 	cmd = "nvim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
 [commit]
-  gpgsign = true
+;  gpgsign = true
 ; [url "https://github.com/"]
 ; 	insteadOf = git@github.com:
 [url "git@gitlab.com:maersktankers/"]

@@ -26,7 +26,6 @@ plugins=(
   history
   z
   bgnotify
-  vi-mode
   zsh-syntax-highlighting
 )
 source $ZSH/oh-my-zsh.sh
@@ -56,4 +55,6 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
+plugins+=(zsh-vi-mode)
+source $ZSH_CUSTOM/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 alias luamake=~/.config/lua-language-server/3rd/luamake/luamake

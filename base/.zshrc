@@ -60,7 +60,17 @@ source $ZSH_CUSTOM/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 alias luamake=~/.config/lua-language-server/3rd/luamake/luamake
 
 if [ `tput cols` -gt "70" ]; then
-echo "
+COLS=`tput cols`
+function PRINT_CENTER {
+  while IFS= read -r line; do
+    OFFSET=$(( ($COLS - ${#line}) / 2 ))
+    for i in `seq $OFFSET`; do
+      printf " "
+    done 
+    printf "$line\n"
+  done <<< "$1"
+}
+PRINT_CENTER "
    
            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
            █░▄▄▀█▀▄▄▀█░▄▄░█▄░▄█▀▄▀██░▄░██░██░█░▄▄█░▄▄░█

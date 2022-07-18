@@ -5,8 +5,8 @@ set $browser firefox # MOZ_ENABLE_WAYLAND=1 firefox
 set $term kitty
 set $menu rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
 set $menu rofi -m $(swaymsg -t get_outputs | jq 'map(select(.active) | .focused) | index(true)') -show drun -run-command 'swaymsg exec -- {cmd}'
-set $screenshot grim ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
-set $screenclip slurp | grim -g - ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
+set $screenshot mkdir -p ~/screenshots; grim ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
+set $screenclip mkdir -p ~/screenshots; slurp | grim -g - ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 set $background ~/wallpaper.jpg
 
 set $cl_high #009ddc
@@ -46,7 +46,8 @@ set $wsF11 21:
 set $wsF12 22:
 
 # Font
-font pango:Sans 12
+#font pango:Sans 12
+font pango:FiraCode Nerd Font 12
 
 # Window borders
 default_border pixel 1
@@ -87,14 +88,9 @@ output * {
 }
 
 # Default workspaces for common programs
-assign [class="^Chromium$"] $ws1
-# assign [class="^code-oss$"] $ws2
-assign [class="^Signal$"] $wsF1
-assign [class="^Riot$"] $wsF1
-assign [class="^Mailspring$"] $wsF2
-assign [app_id="virt-manager"] $wsF8
-assign [class="^KeePass2$"] $wsF11
-assign [class="^Spotify$"] $wsF12
+assign [class="^Firefox$"] $ws1
+assign [class="^Slack$"] $ws9
+assign [class="^Spotify$"] $ws0
 
 # Shortcuts
 bindsym $mod+Return exec $term
@@ -129,9 +125,6 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 # Brightness controls
 bindsym --locked XF86MonBrightnessUp exec --no-startup-id light -A 5
 bindsym --locked XF86MonBrightnessDown exec --no-startup-id light -U 5
-
-# Toggle Redshift
-bindsym $mod+Home exec --no-startup-id pkill -USR1 redshift
 
 # Idle configuration
 exec swayidle \

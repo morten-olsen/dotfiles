@@ -4,7 +4,7 @@
     "height": 30,
 
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
-    "modules-right": ["tray", "custom/weather", "custom/storage", "backlight", "pulseaudio", "network", "battery", "clock"],
+    "modules-right": ["tray", "custom/weather", "custom/storage", "backlight", "pulseaudio", "network", "battery", "clock", "custom/yubikey"],
     "sway/mode": {
         "format": " {}"
     },
@@ -48,8 +48,8 @@
         "format-alt-click": "click-right",
         "format-muted": "mute ",
         "format-icons": {
-            "phone": [" ", " ", " 墳", " "],
-            "default": ["", "", "墳", ""]
+            "phone": [" ", " ", " ", " "],
+            "default": ["", "", "", ""]
         },
         "scroll-step": 10,
         "on-click": "pavucontrol",
@@ -63,11 +63,15 @@
         "interval": 60,
         "exec": "~/.config/waybar/modules/storage.sh"
     },
+    "custom/yubikey": {
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/yubikey.sh"
+    },
     "backlight": {
         "format": "{percent}% {icon}",
         "format-alt": "{percent}% {icon}",
         "format-alt-click": "click-right",
-        "format-icons": [""],
+        "format-icons": [""],
         "on-scroll-down": "light -A 1",
         "on-scroll-up": "light -U 1"
     },

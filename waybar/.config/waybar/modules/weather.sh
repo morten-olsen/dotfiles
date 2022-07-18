@@ -35,25 +35,25 @@ temperature=$(echo ${weather[2]} | sed -E 's/([[:digit:]]+)\.\./\1 to /g')
 # https://fontawesome.com/icons?s=solid&c=weather
 case $(echo ${weather[1]##*,} | tr '[:upper:]' '[:lower:]') in
 "clear" | "sunny")
-    condition=""
+    condition=" Sunny"
     ;;
 "partly cloudy")
-    condition=""
+    condition=" Partly cloudy"
     ;;
 "cloudy")
-    condition=""
+    condition=" Cloudy"
     ;;
 "overcast")
-    condition=""
+    condition=" Overcast"
     ;;
 "mist" | "fog" | "freezing fog")
-    condition=""
+    condition="Fog"
     ;;
 "patchy rain possible" | "patchy light drizzle" | "light drizzle" | "patchy light rain" | "light rain" | "light rain shower" | "rain")
-    condition=""
+    condition=" Light rain"
     ;;
 "moderate rain at times" | "moderate rain" | "heavy rain at times" | "heavy rain" | "moderate or heavy rain shower" | "torrential rain shower" | "rain shower")
-    condition=""
+    condition=" Rain"
     ;;
 "patchy snow possible" | "patchy sleet possible" | "patchy freezing drizzle possible" | "freezing drizzle" | "heavy freezing drizzle" | "light freezing rain" | "moderate or heavy freezing rain" | "light sleet" | "ice pellets" | "light sleet showers" | "moderate or heavy sleet showers")
     condition=""

@@ -1,0 +1,8 @@
+[Unit]
+Description=Snapclient
+
+[Service]
+ExecStart=/sbin/snapclient -h 172.50.0.20 -s 7
+
+[Install]
+WantedBy=default.target

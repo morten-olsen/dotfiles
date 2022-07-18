@@ -1,0 +1,8 @@
+[Unit]
+Description=Deckapp
+
+[Service]
+ExecStart=/home/alice/work/deck/packages/example/bin/index.js
+
+[Install]
+WantedBy=default.target

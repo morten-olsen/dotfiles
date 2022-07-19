@@ -1,0 +1,5 @@
+alias syarn="snode.sh yarn"
+alias spnpm="snode.sh pnpm"
+alias snpm="snode.sh npm"
+alias snode="snode.sh node"
+alias snode-cli="snode.sh bash"

@@ -8,6 +8,7 @@ set $menu rofi -m $(swaymsg -t get_outputs | jq 'map(select(.active) | .focused)
 set $screenshot mkdir -p ~/screenshots; grim ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 set $screenclip mkdir -p ~/screenshots; slurp | grim -g - ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 set $background ~/wallpaper.jpg
+set $framebg ~/.frame.jpg
 
 set $cl_high #009ddc
 set $cl_indi #d9d8d8
@@ -85,6 +86,10 @@ input "1046:49477:Ducky_Ducky_One2_Mini_RGB" {
 # Output configuration
 output * {
   bg $background fill
+}
+
+output 'Unknown WSQLED        0x00000001' {
+  bg $framebg fill
 }
 
 # Default workspaces for common programs
